@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/menu_map">
+
+    <fragment
+        android:id="@+id/menu_map"
+        android:name="io.github.zyngjaku.tmsfrontend.ui.map.MapFragment"
+        android:label="@string/menu_map"
+        tools:layout="@layout/map_fragment"
+        android:visible="true" />
+
+    <fragment
+        android:id="@+id/menu_work"
+        android:name="io.github.zyngjaku.tmsfrontend.ui.work.WorkFragment"
+        android:label="@string/menu_work"
+        tools:layout="@layout/work_fragment"
+        android:visible="true" />
+
+    <fragment
+        android:id="@+id/menu_orders"
+        android:name="io.github.zyngjaku.tmsfrontend.ui.orders.OrdersFragment"
+        android:label="@string/menu_orders"
+        tools:layout="@layout/orders_fragment"
+        android:visible="true" />
+
+    <fragment
+        android:id="@+id/menu_employees"
+        android:name="io.github.zyngjaku.tmsfrontend.ui.employee.EmployeeFragment"
+        android:label="@string/menu_employees"
+        tools:layout="@layout/employee_fragment"
+        android:visible="true" />
+
+    <fragment
+        android:id="@+id/menu_vehicles"
+        android:name="io.github.zyngjaku.tmsfrontend.ui.vehicle.VehicleFragment"
+        android:label="@string/menu_vehicles"
+        tools:layout="@layout/vehicle_fragment"
+        android:visible="true" />
+</navigation>

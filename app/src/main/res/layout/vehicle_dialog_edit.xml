@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#4d4d4d"
+            android:text="Name" />
+
+        <EditText
+            android:id="@+id/nameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:drawablePadding="12dp"
+            android:hint=""
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:textColor="#4d4d4d"
+            android:textColorHighlight="#4d4d4d"
+            android:textColorHint="#4d4d4d" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#4d4d4d"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#4d4d4d"
+            android:text="Registration" />
+
+        <EditText
+            android:id="@+id/registrationEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:drawablePadding="12dp"
+            android:hint=""
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:textColor="#4d4d4d"
+            android:textColorHighlight="#4d4d4d"
+            android:textColorHint="#4d4d4d" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#4d4d4d"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#4d4d4d"
+            android:text="Review date" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/dateEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:inputType="date"
+                    android:maxLines="1"
+                    android:padding="4dp"
+                    android:textColor="#4d4d4d"
+                    android:textColorHighlight="#4d4d4d"
+                    android:textColorHint="#4d4d4d" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#4d4d4d" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/calendarImageButton"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_calendar"
+                android:background="@null" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#4d4d4d"
+            android:text="Name" />
+
+        <EditText
+            android:id="@+id/nameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_action_name"
+            android:drawablePadding="12dp"
+            android:hint="Name"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:drawableTint="#4d4d4d"
+            android:textColor="#4d4d4d"
+            android:textColorHighlight="#4d4d4d"
+            android:textColorHint="#4d4d4d" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#4d4d4d"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#4d4d4d"
+            android:text="Registration" />
+
+        <EditText
+            android:id="@+id/registrationEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_action_name"
+            android:drawablePadding="12dp"
+            android:hint="Registration"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:drawableTint="#4d4d4d"
+            android:textColor="#4d4d4d"
+            android:textColorHighlight="#4d4d4d"
+            android:textColorHint="#4d4d4d" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#4d4d4d"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#4d4d4d"
+            android:text="Review date" />
+
+        <EditText
+            android:id="@+id/dateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:drawableLeft="@drawable/ic_action_name"
+            android:drawablePadding="12dp"
+            android:hint="Review date"
+            android:inputType="date"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:drawableTint="#4d4d4d"
+            android:textColor="#4d4d4d"
+            android:textColorHighlight="#4d4d4d"
+            android:textColorHint="#4d4d4d" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#4d4d4d" />
+
+    </LinearLayout>
+</RelativeLayout>
+-->

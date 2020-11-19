@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_map"
+            android:icon="@drawable/menu_map"
+            android:title="@string/menu_map" />
+        <item
+            android:id="@+id/menu_work"
+            android:icon="@drawable/menu_work"
+            android:title="@string/menu_work" />
+        <item
+            android:id="@+id/menu_orders"
+            android:icon="@drawable/menu_orders"
+            android:title="@string/menu_orders" />
+        <item
+            android:id="@+id/menu_employees"
+            android:icon="@drawable/menu_employees"
+            android:title="@string/menu_employees" />
+
+        <item
+            android:id="@+id/menu_vehicles"
+            android:icon="@drawable/menu_vehicles"
+            android:title="@string/menu_vehicles" />
+    </group>
+</menu>

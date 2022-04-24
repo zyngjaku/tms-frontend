@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
                 int returnCode = 500;
 
                 try {
-                    URL url = new URL(Utils.API_ADDRESS + "/user/details");
+                    URL url = new URL(Utils.API_ADDRESS + "/users/details");
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                     conn.setRequestMethod("GET");
                     conn.setRequestProperty("Content-Type", "application/json;charset=UTF-8");

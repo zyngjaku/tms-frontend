@@ -56,7 +56,7 @@ public class MapFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        Mapbox.getInstance(getActivity().getApplicationContext(),"sk.eyJ1IjoienluZ2kiLCJhIjoiY2tmeDBzaTgyMXFmdDMycGRtZWduODdyMSJ9.T252dPWOTS48QpPufp9fAg");
+        Mapbox.getInstance(getActivity().getApplicationContext(),"pk.eyJ1IjoienluZ2kiLCJhIjoiY2wyZDhkMGVkMHd2dzNkcDk4a3R6eHIyZyJ9.dXMk-1iDSzdtvlr8Ff-8gw");
         View view = inflater.inflate(R.layout.map_fragment,container,false);
 
         localizationSnapFloatingActionButton = view.findViewById(R.id.localizationSnapFloatingActionButton);
@@ -162,7 +162,7 @@ public class MapFragment extends Fragment {
                 int returnCode = 500;
 
                 try {
-                    URL url = new URL(Utils.API_ADDRESS + "/drivers");
+                    URL url = new URL(Utils.API_ADDRESS + "/users");
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                     conn.setRequestMethod("GET");
                     conn.setRequestProperty("Content-Type", "application/json;charset=UTF-8");
@@ -193,18 +193,20 @@ public class MapFragment extends Fragment {
                         User[] users = g.fromJson(res.toString(), User[].class);
 
                         for (final User user : users) {
-                            latLngBoundsBuilder.include(new LatLng(user.getLocalization().getLatitude(), user.getLocalization().getLongitude()));
+                            if (user.getLocalization() != null && user.getLocalization().getLatitude() != null && user.getLocalization().getLongitude() != null) {
+                                latLngBoundsBuilder.include(new LatLng(user.getLocalization().getLatitude(), user.getLocalization().getLongitude()));
 
-                            try {
-                                Bitmap bitmap = Picasso.get().load(user.getAvatarUrl()).priority(Picasso.Priority.HIGH).get();
-                                
-                                markerOptions.add(new MarkerOptions()
-                                        .title(user.getFirstName() + " " + user.getLastName())
-                                        .snippet(user.getLocalization().toString())
-                                        .position(new LatLng(user.getLocalization().getLatitude(), user.getLocalization().getLongitude()))
-                                        .setIcon(createMarker(bitmap)));
-                            } catch (IOException e) {
-                                e.printStackTrace();
+                                try {
+                                    Bitmap bitmap = Picasso.get().load(user.getAvatarUrl()).priority(Picasso.Priority.HIGH).get();
+
+                                    markerOptions.add(new MarkerOptions()
+                                            .title(user.getFirstName() + " " + user.getLastName())
+                                            .snippet(user.getLocalization().toString())
+                                            .position(new LatLng(user.getLocalization().getLatitude(), user.getLocalization().getLongitude()))
+                                            .setIcon(createMarker(bitmap)));
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
                             }
                         }
                         

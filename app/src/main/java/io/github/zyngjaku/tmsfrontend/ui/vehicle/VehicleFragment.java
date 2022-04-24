@@ -113,7 +113,7 @@ public class VehicleFragment extends Fragment {
                 int returnCode = 500;
 
                 try {
-                    URL url = new URL(Utils.API_ADDRESS + "/vehicle/all");
+                    URL url = new URL(Utils.API_ADDRESS + "/vehicles");
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                     conn.setRequestMethod("GET");
                     conn.setRequestProperty("Content-Type", "application/json;charset=UTF-8");

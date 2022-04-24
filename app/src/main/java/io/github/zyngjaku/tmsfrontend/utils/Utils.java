@@ -14,7 +14,7 @@ import android.widget.TextView;
 import io.github.zyngjaku.tmsfrontend.R;
 
 public class Utils {
-    public static String API_ADDRESS = "http://192.168.1.64:8080";
+    public static String API_ADDRESS = "http://192.168.1.64:8080/api";
 
     public static void linearLayoutSetMargins(LinearLayout linearLayout, int left, int top, int right, int bottom) {
         LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) linearLayout.getLayoutParams();
